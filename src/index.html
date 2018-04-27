@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport " content="width = device - width, initial - scale = 1, maximum - scale = 1, minimum - scale = 1, user - scalable = no ">
+    <meta http - equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telphone=no, email=no,address=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./swiper-3.4.2.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        .wrap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            width: 100%;
+            position: relative;
+            height: 0.8rem;
+        }
+        
+        .b1 {
+            position: absolute;
+            width: 0.8rem;
+            height: 0.8rem;
+            text-align: center;
+            line-height: 0.4rem;
+            right: 0;
+            top: 0;
+        }
+        
+        .b1 i {
+            font-size: 0.64rem;
+            color: #ccc;
+        }
+        
+        .b2 {
+            width: 80%;
+            height: 0.6rem;
+            margin: 0.05rem;
+            border: 1px solid #333;
+            background: #ccc;
+            display: flex;
+        }
+        
+        .b2 i {
+            display: block;
+            width: 0.6rem;
+            height: 0.6rem;
+            font-size: 0.32rem;
+            text-align: center;
+            line-height: 0.6rem;
+        }
+        
+        .b2 input {
+            display: block;
+            width: 60%;
+            height: 0.5rem;
+            font-size: 0.32rem;
+            border: none;
+            outline: none;
+            background: #ccc;
+        }
+        
+        .box {
+            width: 100%;
+            height: 2rem;
+        }
+        
+        .box img {
+            width: 100%;
+            height: 2rem;
+        }
+        
+        .box2 {
+            width: 100%;
+            height: 1.56rem;
+            display: flex;
+        }
+        
+        .box2 dl {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .box2 dl dt i {
+            font-size: 0.64rem;
+        }
+        
+        .box2 dl dd {
+            font-size: 0.24rem;
+        }
+        
+        .box3 {
+            width: 90%;
+            margin: 0.8rem auto;
+            display: flex;
+            align-items: center;
+        }
+        
+        .le {
+            width: 1.6rem;
+            height: 1.16rem;
+            margin-right: 0.5rem;
+        }
+        
+        .le img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .b6 {
+            font-size: 0.24rem;
+        }
+        
+        .b7 {
+            font-size: 0.24rem;
+        }
+        
+        .box4 {
+            width: 100%;
+            height: 1.16rem;
+        }
+        
+        .box4 img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .box5 {
+            width: 100%;
+        }
+        
+        .b8 {
+            width: 100%;
+            display: flex;
+        }
+        
+        .b8 img {
+            width: 50%;
+            height: 2.56rem;
+        }
+        
+        footer {
+            width: 100%;
+            height: 2rem;
+            display: flex;
+        }
+        
+        footer dl {
+            flex: 1;
+            text-align: center;
+        }
+        
+        footer dl.bb {
+            color: orange;
+        }
+        
+        footer dl dt i {
+            font-size: 0.64rem;
+        }
+        
+        footer dl dd {
+            font-size: 0.24rem;
+        }
+        
+        .jia {
+            width: 100%;
+            flex: 1;
+        }
+        
+        .jia main {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        
+        .jia main.div {
+            display: block;
+        }
+        
+        .a1 {
+            font-size: 0.32rem;
+        }
+    </style>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + "px";
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <a href="./dist/search.html">
+                <div class="b2">
+                    <i class="icon iconfont icon-fangdajing"></i>
+                    <input type="text" placeholder="小米">
+                </div>
+            </a>
+            <div class="b1">
+                <i class="icon iconfont icon-play1"></i>
+            </div>
+
+        </header>
+        <div class="jia">
+            <main class="div">
+                <div class="swiper-container box">
+                    <div class="swiper-wrapper">
+                        <!--<div class="swiper-slide">
+                            <img src="./img/20150120_ifold1.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/20150120_ifold2.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/20150120_ifold3.jpg">
+                        </div>-->
+                    </div>
+                    <script type="text/x-handlebars-template" id="box1">
+                        {{#each box1}}
+                        <div class="swiper-slide">
+                            <img src="{{img}}">
+                        </div>
+                        {{/each}}
+                    </script>
+                    <span class="swiper-pagination page"></span>
+
+                </div>
+
+                <div class="box2">
+                    <dl>
+                        <dt>
+                        <i class="icon iconfont icon-zanting3"></i>
+                    </dt>
+                        <dd>活动屏道</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                        <i class="icon iconfont icon-zanting3"></i>
+                    </dt>
+                        <dd>活动屏道</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                        <i class="icon iconfont icon-zanting3"></i>
+                    </dt>
+                        <dd>活动屏道</dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                        <i class="icon iconfont icon-zanting3"></i>
+                    </dt>
+                        <dd>活动屏道</dd>
+                    </dl>
+                </div>
+
+                <div class="box3">
+                    <!--<div class="le">
+                        <img src="./img/20150120_ifold1.jpg" alt="">
+                    </div>
+                    <div>
+                        <h2 class="b6">小米之家</h2>
+                        <p class="b7">距离723公里</p>
+                    </div>-->
+                </div>
+                <script type="text/x-handlebars-template" id="box2">
+                    <div class="le">
+                        <img src="{{img}}">
+                    </div>
+                    <div>
+                        <h2 class="b6">{{p}}</h2>
+                        <p class="b7">{{t}}</p>
+                    </div>
+                </script>
+
+
+                <div class="box4">
+                    <img src="./img/首页_02.jpg" alt="">
+                </div>
+                <div class="box5">
+                    <p class="a1">商城早报</p>
+                    <div class="b8">
+                        <img src="./img/首页_04.jpg" alt="">
+                        <img src="./img/首页_05.jpg" alt="">
+                    </div>
+
+                </div>
+
+            </main>
+            <main>2</main>
+            <main>3</main>
+            <main>4</main>
+        </div>
+        <footer>
+            <dl class="bb">
+                <dt>
+                        <i class="icon iconfont icon-zanting3"></i>
+                    </dt>
+                <dd>活动屏道</dd>
+            </dl>
+            <dl>
+                <dt>
+                        <i class="icon iconfont icon-zanting3"></i>
+                    </dt>
+                <dd>活动屏道</dd>
+            </dl>
+            <dl>
+                <dt>
+                        <i class="icon iconfont icon-zanting3"></i>
+                    </dt>
+                <dd>活动屏道</dd>
+            </dl>
+            <dl>
+                <dt>
+                        <i class="icon iconfont icon-zanting3"></i>
+                    </dt>
+                <dd>活动屏道</dd>
+            </dl>
+        </footer>
+    </div>
+    <script src="./jquery-1.8.3.min.js"></script>
+    <script src="./swiper-3.4.2.min.js"></script>
+    <script src="./handlebars.js"></script>
+    <script>
+        $.ajax({
+            url: "/getdata",
+            dataType: "json",
+            success: function(res) {
+                var tem = $("#box1").html();
+                var temp = Handlebars.compile(tem);
+                var tempp = temp(res);
+                $(".swiper-wrapper").html(tempp);
+                var swip = new Swiper(".box", {
+                    autoplay: 2000,
+                    loop: true,
+                    pagination: ".page"
+                })
+                console.log(res.box2);
+
+                var tem2 = $("#box2").html();
+                console.log(tem2);
+                var temp2 = Handlebars.compile(tem2);
+                var tempp2 = temp2(res.box2);
+                $(".box3").html(tempp2);
+            }
+        })
+        $("footer dl").on("click", function() {
+            $(this).addClass("bb").siblings().removeClass("bb");
+            var ind = $(this).index();
+            console.log(ind)
+
+            $(".jia main").eq(ind).addClass("div").siblings().removeClass("div");
+        });
+    </script>
+</body>
+
+</html>
